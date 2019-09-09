@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  margin: 0.4em;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  min-height: 100%;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.header-content h1 {
+  font-size: 1.6em;
+}
+
+.link-login {
+  text-decoration: none;
+  color: #fff;
+  transition: color ease 0.3s;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.link-login:hover {
+  color: #98beff;
+}
+
+.btn {
+  background-color: #406AB3;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-size: 1.05em;
+  font-weight: bold;
+  padding: 0.8em 1.6em;
+}
+
+input {
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #666; 
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline-color: #C2D8EB;
+}
+
+input::placeholder {
+  color: #aaa;
+  text-transform: capitalize;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.08);
+  padding: 1.2em;
+  width: 30%;
+  margin: auto;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.card form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.card button {
+  margin-top: 0.4em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: #F6F8FA;
+}
+
+.color-text-white {
+  color: #fff;
+}
+
+.color-text-base-blue {
+  color: #406AB3;
+}
+
+.color-text-gray {
+  color: #555;
+}
+
+.color-text-contrast-blue {
+  color: #C2D8EB;
+}
+
+.color-text-darker-blue {
+  color: #2d569e;
+}
+
+.color-bg-white {
+  background-color: #fff;
+}
+
+.color-bg-base-blue {
+  background-color: #406AB3;
+}
+
+.color-bg-gray {
+  background-color: #555;
+}
+
+.color-bg-contrast-blue {
+  background-color: #C2D8EB;
+}
+
+.color-bg-darker-blue {
+  background-color: #2d569e;
+}
+
+.color-bg-gradient {
+  background-image: linear-gradient(to bottom right, #F6F8FA, #C2D8EB);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+/* #406AB3 azul
+#555 cinza texto
+#C2D8EB azul claro
+#553F8F cor degradê 1
+#67AFDE cor degradê 2 
+#2d569e botão hover */
+

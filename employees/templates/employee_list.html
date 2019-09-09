@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'header.html' %}
+    <main>
+      <h1>Employees</h1>
+
+      <link rel="stylesheet" href="{% static 'css/employee.css' %}">
+
+      <table border="1">
+      <thead>
+          <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Department</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for employee in object_list %}
+          <tr>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.department }}</td>
+          <td><a href="{% url "employee_view" employee.id %}">view</a></td>
+          <td><a href="{% url "employee_edit" employee.id %}">edit</a></td>
+          <td><a href="{% url "employee_delete" employee.id %}">delete</a></td>
+          </tr>
+          {% endfor %}
+      </tbody>
+      </table>
+
+      <a href="{% url "employee_add" %}">Add</a>
+
+      <p><a href="{% url 'logout' %}">logout</a></p>
+    </main>
+{% endblock %}
