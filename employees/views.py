@@ -4,8 +4,6 @@ from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404, redirect
 from employees.models import Employee
 from employees.forms import EmployeeForm
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
