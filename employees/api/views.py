@@ -40,4 +40,3 @@ def login(request):
         {'token': token.key},
         status=HTTP_200_OK
     )
-
