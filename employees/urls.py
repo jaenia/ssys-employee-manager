@@ -1,6 +1,5 @@
 from django.urls import include, path
 from employees import views
-from employees.api import viewsets
 
 urlpatterns = [
     path('', views.employee_list, name='employee_list'),

@@ -1,0 +1,20 @@
+[
+  {
+    "model": "employees.Employee",
+    "pk": 1,
+    "fields": {
+      "name": "John Lennon",
+      "email": "jlennon@beatles.com",
+      "department": "Beatles"
+    }
+  },
+  {
+    "model": "employees.Employee",
+    "pk": 2,
+    "fields": {
+      "name": "Paul McCartney",
+      "email": "pmccartney@beatles.com",
+      "department": "Beatles"
+    }
+  }
+]
