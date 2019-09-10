@@ -2,7 +2,11 @@
   <div class="header-content">
     <h1>Employee Manager</h1>
     <nav>
-      <a href="" class="link-login">Log in</a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="link-login">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="link-login">Login</a>
+      {% endif %}
     </nav>
   </div>    
 </header>

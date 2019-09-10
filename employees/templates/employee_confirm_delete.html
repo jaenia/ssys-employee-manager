@@ -3,10 +3,20 @@
 {% block content %}
     {% include 'header.html' %}
     <main>
-        <h1>Employee Delete</h1>
-        <form method="post">{% csrf_token %}
-            Are you sure you want to delete "{{ object }}" ?
-            <input type="submit" value="Submit" />
+      <form method="post">{% csrf_token %}
+        <div class="list-title-wrapper">
+          <h2>Are you sure you want to delete "{{ object }}" ?</h2>
+          <button type="submit" class="btn danger"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        <table border="1">
+            <tbody>
+                <tr>
+                <td>{{object.name}}</td>
+                <td>{{object.email}}</td>
+                <td>{{object.department}}</td>
+                </tr>
+            </tbody>
+        </table>            
         </form>
     </main>
 {% endblock %}

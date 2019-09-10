@@ -3,18 +3,18 @@
 
 {% block content %}
     {% include 'header.html' %}
-    <main>
-      <h1>Employees</h1>
-
-      <link rel="stylesheet" href="{% static 'css/employee.css' %}">
-
+    <main id="employee-list">
+      <div class="list-title-wrapper">
+        <h2>Employee List</h2>
+        <a href="{% url 'employee_add' %}" class="btn"><i class="fas fa-plus"></i></a>
+      </div>
+      
       <table border="1">
       <thead>
           <tr>
           <th>Name</th>
           <th>E-mail</th>
           <th>Department</th>
-          <th>View</th>
           <th>Edit</th>
           <th>Delete</th>
           </tr>
@@ -25,16 +25,19 @@
           <td>{{ employee.name }}</td>
           <td>{{ employee.email }}</td>
           <td>{{ employee.department }}</td>
-          <td><a href="{% url "employee_view" employee.id %}">view</a></td>
-          <td><a href="{% url "employee_edit" employee.id %}">edit</a></td>
-          <td><a href="{% url "employee_delete" employee.id %}">delete</a></td>
+          <td>
+            <a href="{% url 'employee_edit' employee.id %}">
+              <i class="fas fa-edit"></i>
+            </a>
+          </td>
+          <td>
+            <a href="{% url 'employee_delete' employee.id %}" >
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
           </tr>
           {% endfor %}
       </tbody>
       </table>
-
-      <a href="{% url "employee_add" %}">Add</a>
-
-      <p><a href="{% url 'logout' %}">logout</a></p>
     </main>
 {% endblock %}

@@ -14,12 +14,7 @@ def employee_list(request):
     data = {}
     data['object_list'] = employee
     return render(request, 'employee_list.html', data)
-
-@login_required
-def employee_view(request, pk):
-    employee= get_object_or_404(Employee, pk=pk)    
-    return render(request, 'employee_detail.html', {'object':employee})
-
+    
 @login_required
 def employee_create(request):
     form = EmployeeForm(request.POST or None)
@@ -44,13 +39,3 @@ def employee_delete(request, pk):
         employee.delete()
         return redirect('employee_list')
     return render(request, 'employee_confirm_delete.html', {'object':employee})
-
-# def login(request):
-#     username = request.POST['username']
-#     password = request.POST['password']
-#     user = authenticate(request, username=username, password=password)
-#     if user is not None:
-#         login(request, user)
-#         return redirect('employee_list')
-#     else:
-#         return('invalid login')
