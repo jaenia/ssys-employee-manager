@@ -1,20 +1,38 @@
 [
-  {
-    "model": "employees.Employee",
-    "pk": 1,
-    "fields": {
-      "name": "John Lennon",
-      "email": "jlennon@beatles.com",
-      "department": "Beatles"
+    {
+        "model": "employees.Employee",
+        "pk": 1,
+        "fields": {
+          "name": "Princess Leia",
+          "email": "princessleia@example.com",
+          "department": "Space"
+        }
+    },
+    {
+        "model": "employees.Employee",
+        "pk": 2,
+        "fields": {
+          "name": "Chewbacca",
+          "email": "chewie@example.com",
+          "department": "Galaxy"
+        }
+    },
+    {
+        "model": "employees.Employee",
+        "pk": 3,
+        "fields": {
+          "name": "Han Solo",
+          "email": "hansolo@example.com",
+          "department": "Millennium Falcon"
+        }
+    },
+    {
+        "model": "employees.Employee",
+        "pk": 4,
+        "fields": {
+          "name": "Darth Vader",
+          "email": "darthvader@example.com",
+          "department": "The Empire"
+        }
     }
-  },
-  {
-    "model": "employees.Employee",
-    "pk": 2,
-    "fields": {
-      "name": "Paul McCartney",
-      "email": "pmccartney@beatles.com",
-      "department": "Beatles"
-    }
-  }
 ]
