@@ -58,6 +58,7 @@ header {
   padding: 0.8em 1.6em;
   cursor: pointer;
   transition: background-color ease 0.4s;
+  text-decoration: none;
 }
 
 .error-msg {
@@ -164,13 +165,19 @@ thead {
 }
 
 .list-title-wrapper .btn {
-  padding: 0.8em;
+  padding: 0;
   border-radius: 50%;
   text-align: center;
-  vertical-align: middle;
   background-color: #98BCD8;
   transition: background-color ease 0.4s;
+  width: 2.4em;
+  height: 2.4em;
+  box-sizing: border-box;
+  display: flex;  
+  justify-content: space-around;
+  align-items: center;
 }
+
 
 .list-title-wrapper .btn:hover {
   background-color: #80a8c7;
